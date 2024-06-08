@@ -149,10 +149,8 @@ body {
 }
 
 .hero h1 {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  font-size: 1.55rem;
-  line-height: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   font-weight: 3rem;
   margin-left: 1rem;
   align-items: left;
@@ -163,7 +161,7 @@ body {
 
 @media (min-width: 768px) {
   .hero h1 {
-    font-size: 1.80rem;
+    font-size: 1.50rem;
     line-height: 1;
   }
 }
@@ -181,6 +179,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-style: italic;
 }
 
 
@@ -210,6 +209,7 @@ body {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .about .prose p {
@@ -220,7 +220,7 @@ body {
   /* Gaya untuk gambar di bagian About */
   height: auto;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -234,8 +234,10 @@ body {
 
 .about img {
   /* Setengah lebar pada layar medium ke atas */
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center;
+  justify-items: center;
+  image-rendering: optimizeQuality;
+  margin-left: 17rem;
   /* Margin kiri dan kanan otomatis */
 }
 
@@ -366,9 +368,12 @@ footer {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-size: 2;
 }
 
 footer p {
   text-align: left;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   /* Mengatur teks agar berada di kiri */
 }
