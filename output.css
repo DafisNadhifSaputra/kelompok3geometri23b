@@ -219,7 +219,7 @@ body {
 .about img {
   /* Gaya untuk gambar di bagian About */
   height: auto;
-  width: 100%;
+  width: 1%;
   border-radius: 1.5rem;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -237,7 +237,6 @@ body {
   align-items: center;
   justify-items: center;
   image-rendering: optimizeQuality;
-  margin-left: 17rem;
   /* Margin kiri dan kanan otomatis */
 }
 
@@ -285,9 +284,12 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.projects .project-card img {
-  height: 12rem;
-  width: 100%;
+.projects img {
+  align-items: center;
+  justify-items: center;
+  image-rendering: optimizeQuality;
+  width: 50%;
+  border-radius: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
