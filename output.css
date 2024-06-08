@@ -207,7 +207,7 @@ body {
   margin-bottom: 2rem;
   text-align: center;
   font-size: 1.875rem;
-  line-height: 2.25rem;
+  line-height: 1rem;
   font-weight: 700;
   text-wrap: balance;
 }
@@ -219,7 +219,7 @@ body {
 .about img {
   /* Gaya untuk gambar di bagian About */
   height: auto;
-  width: 1%;
+  width: 100%;
   border-radius: 1.5rem;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -229,6 +229,7 @@ body {
 @media (min-width: 768px) {
   .about img {
     width: 50%;
+    margin-left: 17rem;
   }
 }
 
@@ -288,10 +289,17 @@ body {
   align-items: center;
   justify-items: center;
   image-rendering: optimizeQuality;
-  width: 50%;
+  width: 100%;
   border-radius: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width:768px){
+  .projects img {
+    margin-left: 17rem;
+    width: 50%;
+  }
 }
 
 .projects h3 {
