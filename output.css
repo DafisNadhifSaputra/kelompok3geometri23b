@@ -212,8 +212,8 @@ body {
   text-wrap: balance;
 }
 
-.about .prose p {
-  margin-bottom: 1rem;
+.about p {
+  margin-bottom: 0.1rem;
 }
 
 .about img {
