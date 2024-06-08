@@ -93,3 +93,36 @@ particlesJS("particles-js", {
     },
     "retina_detect": true // Mendeteksi layar retina untuk meningkatkan kualitas partikel
 });
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  });
+  
+const elements = document.querySelectorAll('.hero .element h1');
+elements.forEach(element => observer.observe(element));
+  
+AOS.init({
+    // ... (opsi lainnya)
+threshold: 0.1, // Animasi dimulai saat 10% elemen terlihat
+once: false, // Animasi hanya berjalan sekali
+unable: 'mobile', // Nonaktifkan animasi di perangkat mobile
+    offset: 120, // Offset (dalam px) dari atas viewport untuk memulai animasi
+});
+  
+document.addEventListener('aos:in', ({ detail }) => {
+console.log('Animasi dimulai:', detail);
+});
+  
+document.addEventListener('aos:out', ({ detail }) => {
+console.log('Animasi selesai:', detail);
+});
+  
+window.addEventListener('scroll', () => {
+console.log('Scrolling...');
+});
