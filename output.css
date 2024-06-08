@@ -259,6 +259,7 @@ body {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
+  background-color: grey;
 }
 
 .projects .project-card {
@@ -308,12 +309,14 @@ body {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .projects p {
   /* Gaya untuk deskripsi proyek */
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+  text-align: center;
 }
 
 /* Contact Section */
