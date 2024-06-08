@@ -30,7 +30,7 @@ particlesJS("particles-js", {
             "value": "#ffffff" // Warna partikel
         },
         "shape": {
-            "type": "circle", // Bentuk partikel (circle, edge, triangle, polygon, star, image)
+            "type": "star", // Bentuk partikel (circle, edge, triangle, polygon, star, image)
             "stroke": {
                 "width": 0, // Ketebalan garis tepi
                 "color": "#000000" // Warna garis tepi
@@ -60,7 +60,7 @@ particlesJS("particles-js", {
             }
         },
         "line_linked": {
-            "enable": true, // Apakah garis penghubung antar partikel diaktifkan
+            "enable": false, // Apakah garis penghubung antar partikel diaktifkan
             "distance": 150, // Jarak maksimal untuk membentuk garis penghubung
             "color": "#ffffff", // Warna garis penghubung
             "opacity": 0.4, // Opacity garis penghubung
@@ -82,6 +82,13 @@ particlesJS("particles-js", {
         }
     },
     "interactivity": {
+        "detect_on":"window",
+        "events":{
+            "onclick":{
+                "enable":true,
+                "mode":"push"
+            }
+        }
         // ... (opsi interaksi dengan mouse) ...
     },
     "retina_detect": true // Mendeteksi layar retina untuk meningkatkan kualitas partikel
