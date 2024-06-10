@@ -455,7 +455,7 @@ body {
   color: rgb(0, 0, 0);    /* Atur warna teks label menjadi putih */
   font-weight: bold; /* Buat label sedikit lebih tebal */
   width: 100%;
-  margin-left: -8rem;
+  margin-left: -5rem;
 }
 
 @media (max-width: 768px) {
