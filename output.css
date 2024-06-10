@@ -424,7 +424,7 @@ body {
 
 @media (max-width: 768px) { 
   #saran .container {
-    width: 100%;
+    width: 280%;
     margin-left: -9.2rem;
     height: auto;
   }
