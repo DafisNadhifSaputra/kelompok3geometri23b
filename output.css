@@ -1,172 +1,534 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Contoh animasi scroll reveal (opsional)
-    ScrollReveal().reveal('.hero, .about, .projects, .contact, .skills, .saran', { 
-        delay: 200,
-        origin: 'bottom',
-        distance: '1px',
-        duration: 1000,
-        reset: true
-    });
+/* style.css */
 
-    // Contoh validasi formulir kontak (opsional)
-    const contactForm = document.querySelector('.contact form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            // ... (Logika validasi formulir)
-        });
-    }
-});
+/* Umum */
+
+body {
+  font-family: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif';
+  color: white;
+  /* Warna teks default untuk background gelap */
+  background: linear-gradient(to right, #8158c2, #3f186c) !important;
+  /* ... (gaya background gradient Anda) ... */
+  position: relative;
+  /* Agar pseudo-element bisa diposisikan relatif terhadap body */
+}
+
+/* style.css */
+
+body {
+  animation: gradientAnimation 10s ease infinite;
+  /* Nama animasi, durasi, timing function, dan pengulangan */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body::before {
+  /* Atau body::after */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: transparent;
+  /* Latar belakang transparan agar tidak menutupi gradient */
+}
+
+#particles-js {
+  position: absolute;
+  /* Posisikan partikel secara absolut */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* style.css */
+
+body {
+  animation: gradientAnimation 10s ease infinite;
+  /* Nama animasi, durasi, timing function, dan pengulangan */
+  background-image: 
+        linear-gradient(to right, #4c2885, #240b40), /* Gradient */
+        url('path/to/particles.png');
+  /* Ganti dengan path gambar partikel Anda */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* style.css */
+
+.background-element {
+  animation: scaleAnimation 5s ease-in-out infinite alternate;
+  /* Animasi perubahan skala */
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+#particles-js {
+  position: absolute;
+  /* Posisikan elemen secara absolut */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Tempatkan partikel di belakang elemen lain */
+}
+
+/* Header (Navbar) */
+
+.navbar {
+  --tw-bg-opacity: 0.8;
+  /* Ubah menjadi transparan dengan opacity 80% */
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  line-height: 1rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.nav-link {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.nav-link:hover {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.hero img {
+  width: 120px; /* Atur lebar foto */
+  height: 120px; /* Atur tinggi foto */
+  border-radius: 50%; /* Membuat foto menjadi bulat */
+  object-fit: cover; /* Agar foto menutupi seluruh area tanpa terdistorsi */
+  display: block; /* Penting agar margin auto bekerja */
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+.hero h1 {
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 1rem;
+  }
+}
 
 
-particlesJS("particles-js", {
-    "particles": {
-        "number": {
-            "value": 80, // Jumlah partikel
-            "density": {
-                "enable": true,
-                "value_area": 800 // Area di mana partikel akan tersebar
-            }
-        },
-        "color": {
-            "value": "#ffffff" // Warna partikel
-        },
-        "shape": {
-            "type": "star", // Bentuk partikel (circle, edge, triangle, polygon, star, image)
-            "stroke": {
-                "width": 0, // Ketebalan garis tepi
-                "color": "#000000" // Warna garis tepi
-            },
-            "polygon": {
-                "nb_sides": 5 // Jumlah sisi jika bentuknya polygon
-            }
-        },
-        "opacity": {
-            "value": 0.5, // Opacity partikel (0-1)
-            "random": false, // Apakah opacity acak atau tidak
-            "anim": {
-                "enable": false, // Apakah opacity dianimasikan
-                "speed": 1, // Kecepatan animasi opacity
-                "opacity_min": 0.1, // Opacity minimum saat animasi
-                "sync": false // Apakah animasi opacity sinkron antar partikel
-                }
-        },
-        "size": {
-            "value": 3, // Ukuran partikel
-            "random": true, // Apakah ukuran acak atau tidak
-            "anim": {
-                "enable": false, // Apakah ukuran dianimasikan
-                "speed": 40, // Kecepatan animasi ukuran
-                "size_min": 0.1, // Ukuran minimum saat animasi
-                "sync": false // Apakah animasi ukuran sinkron antar partikel
-                }
-        },
-        "line_linked": {
-            "enable": false, // Apakah garis penghubung antar partikel diaktifkan
-            "distance": 150, // Jarak maksimal untuk membentuk garis penghubung
-            "color": "#ffffff", // Warna garis penghubung
-            "opacity": 0.4, // Opacity garis penghubung
-            "width": 1 // Ketebalan garis penghubung
-            },
-            "move": {
-                "enable": true, // Apakah partikel bergerak
-            "speed": 6, // Kecepatan pergerakan
-            "direction": "none", // Arah pergerakan (none, top, top-right, right, bottom-right, bottom, bottom-left, left, top-left)
-            "random": false, // Apakah arah pergerakan acak
-            "straight": false, // Apakah pergerakan lurus atau tidak
-            "out_mode": "out", // Mode saat partikel keluar area (out, bounce)
-            "bounce": false, // Apakah partikel memantul saat mengenai tepi
-            "attract": {
-                "enable": false, // Apakah ada gaya tarik-menarik antar partikel
-                "rotateX": 600, // Rotasi gaya tarik-menarik pada sumbu X
-                "rotateY": 1200 // Rotasi gaya tarik-menarik pada sumbu Y
-                }
-        }
-    },
-    "interactivity": {
-        "detect_on":"window",
-        "events":{
-            "onclick":{
-                "enable":true,
-                "mode":"push"
-            }
-        }
-        // ... (opsi interaksi dengan mouse) ...
-    },
-    "retina_detect": true // Mendeteksi layar retina untuk meningkatkan kualitas partikel
-});
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        } else {
-        entry.target.classList.remove('show');
-        }
-    });
-  });
+.hero p  {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 100;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+}
+
+
+@media (min-width: 768px) {
+  .hero p {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+
+/* About Section */
+
+.about {
+  --tw-bg-opacity: 1;
+  color: white;
+  background: linear-gradient(to left, #4b1f7d , #0e011d);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+  animation: gradientAnimation 10s ease infinite;
+  /* Background putih untuk kontras */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.about h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.about p {
+  margin-bottom: 0.1rem;
+}
+
+.about img {
+  /* Gaya untuk gambar di bagian About */
+  height: auto;
+  width: 100%;
+  border-radius: 1.5rem;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  align-items: center;
+  justify-items: center;
+  image-rendering: optimizeQuality;
+}
+
+@media (min-width: 768px) {
+  .about img {
+    width: 50%;
+    margin-left: 17rem;
+  }
+}
+
+/* Projects Section */
+
+.projects {
+  --tw-bg-opacity: 1;
+  color: gray;
+  background: linear-gradient(to left, #4b1f7d , #0e011d);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+  /* Background abu-abu terang */
+}
+
+.container {
+  border-radius: 2rem;
+  width: 100%;
+}
+
+@media (min-width:768px){
+  .container{
+    width: 50%;
+  }
+}
+
+.projects h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  background-color: rgba(252, 255, 176, 0.84);
+  border-radius: 2rem;
+}
+
+.projects img {
+  align-items: center;
+  justify-items: center;
+  image-rendering: optimizeQuality;
+  width: 95%;
+  border-radius: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 1rem;
+}
+
+@media (min-width:768px){
+  .projects img {
+    margin-left:17rem;
+    width: 50%;
+  }
+}
+
+.projects h3 {
+  /* Gaya untuk judul proyek */
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.projects p {
+  /* Gaya untuk deskripsi proyek */
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+  text-align: center;
+}
+
+/* Contact Section */
+
+
+/* Skill Section */
+.skills {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  --tw-bg-opacity: 1;
+  color: gray;
+  background: linear-gradient(to left, #4b1f7d , #0e011d);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+  /* Background abu-abu terang */
+}
+
+.skills h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  background-color: rgba(252, 255, 176, 0.84);
+  border-radius: 2rem;
+}
+
+.skill-container {
+  display: flex; /* Mengatur item dalam satu baris */
   
-const elements = document.querySelectorAll('.hero .element h1');
-elements.forEach(element => observer.observe(element));
-  
-AOS.init({
-    // ... (opsi lainnya)
-threshold: 0.1, // Animasi dimulai saat 10% elemen terlihat
-once: false, // Animasi hanya berjalan sekali
-unable: 'mobile', // Nonaktifkan animasi di perangkat mobile
-    offset: 120, // Offset (dalam px) dari atas viewport untuk memulai animasi
-    });
+  /* Menggunakan flexbox untuk mengatur skill dalam satu baris */
+}
+
+
+.skills img {
+  height: fit-content;
+  width: 110%;
+  border-radius: 1rem;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  display: block; /* Penting agar margin auto bekerja */
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .skills img {
+    width: 60%;
+  }
+}
+
+.container {
+  background-color: rgba(252, 255, 176, 0.84); /* Merah dengan opacity 50% */
+  height: auto;
+  width: auto;
+  margin: 0;
+}
+
+.skill-title {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+#saran input, #saran textarea {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+}
+
+/* Gaya Dasar Bagian */
+#saran {
+  padding: 20px 0; /* Tambahkan padding atas/bawah ke bagian */
+  background-color: rgba(0, 153, 255, 0.8); /* Atur warna latar belakang */
+  width: 100%;
+}
+
+/* Gaya Wadah (Diasumsikan Anda menggunakan Bootstrap) */
+#saran .container {
+  border-radius: 10px; /* Sudut membulat untuk tampilan yang lebih lembut */
+  padding: 30px;    /* Tingkatkan padding untuk ruang lebih di dalam */
+  width: 100%;
+}
+
+/* Gaya Judul */
+#saran h2 {
+  color: white;     /* Atur warna teks judul menjadi putih untuk kontras */
+  margin-bottom: 3rem; /* Tambahkan ruang di bawah judul */
+  width: 100%; /* Lebar elemen h2 akan menyesuaikan dengan konten */
+  white-space: nowrap; /* Mencegah teks berganti baris */
+  overflow: hidden;    /* Menyembunyikan karakter yang belum diketik */
+  border-right: 0.15em solid orange; /* Menambahkan efek kursor berkedip */
+  animation: typing 2.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }}
+
+/* Gaya Formulir */
+#saran .form-label {
+  color: rgb(0, 0, 0);    /* Atur warna teks label menjadi putih */
+  font-weight: bold; /* Buat label sedikit lebih tebal */
+  width: 100%;
+  margin-left: -15rem;
+}
+
+@media (max-width: 768px) {
+  #saran .form-label{
+    margin-left: -5rem;
+  }
+}
+
+#saran .form-control {
+  background-color: rgb(215, 203, 203); /* Latar belakang putih semi-transparan */
+  border: none;      /* Hapus border bawaan */
+  border-radius: 5px;  /* Tambahkan sudut membulat ke kolom input */
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  margin-left: 10rem;
+}
+
+@media (max-width: 768px) { 
+  #saran .form-control {
+    width: 200%;
+    margin-left: -1rem;
+  }
+}
+
+#saran .btn-primary {
+  background-color: #0066cc; /* Biru yang lebih gelap untuk tombol */
+  border: none;
+  margin-top: 15px; /* Tambahkan ruang di atas tombol */
+  width: 20%;
+  margin-left: 20rem;
+}
+
+@media (max-width: 768px) {
+  #saran .btn-primary{
+    margin-left: 5rem;
+    width: 100%;
+  }
+}
+
+/* Penyesuaian Responsif */
+@media (max-width: 768px) { 
+  #saran .col-md-8 {
+    flex: 0 0 100%; /* Buat kolom formulir lebar penuh pada layar yang lebih kecil */
+    max-width: 50%;
+  }
+}
+
+#saran input, #saran textarea {
+  caret-color: red; /* Ubah warna kursor (misalnya, merah) */
+  caret-shape: block; /* Bentuk kursor (block, underscore, bar) */
+}
+
+/* Animasi Kedipan Kursor */
+#saran input:focus, #saran textarea:focus {
+  caret-color: transparent; /* Sembunyikan kursor saat fokus */
+  animation: blink 1s infinite; /* Animasi kedipan */
+}
+
+@keyframes blink {
+  50% {
+    caret-color: red; /* Tampilkan kursor saat animasi 50% */
+  }
+}
+
     
-    document.addEventListener('aos:in', ({ detail }) => {
-        console.log('Animasi dimulai:', detail);
-});
 
-document.addEventListener('aos:out', ({ detail }) => {
-console.log('Animasi selesai:', detail);
-});
+  /* Gaya Footer */
+footer {
+  background-color: #fff; /* Latar belakang putih */
+  color: #333;            /* Warna teks gelap */
+  margin-bottom: -1rem;      /* Padding dalam footer */
+  text-align: left;       /* Teks rata kiri */
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    const inputFields = document.querySelectorAll('#saran input, #saran textarea'); // Pilih semua input dan textarea
+footer p {
+  margin-bottom: 5px;     /* Jarak antar paragraf */
+  margin-left: 1rem;
+}
+
+footer .text-3xl {
+  font-size: 1rem;   /* Ukuran font lebih besar untuk nomor telepon */
+  font-weight: bold;     /* Teks tebal */
+}
+@media (max-width: 768px) { 
+  footer {
+    text-align: center; /* Teks rata tengah pada layar kecil */
+  }
+}
+
   
-    inputFields.forEach(field => {
-      field.addEventListener('focus', function() {
-        const placeholderText = this.placeholder;
-        this.placeholder = ''; // Kosongkan placeholder saat fokus
-  
-        let index = 0;
-        function type() {
-          if (index < placeholderText.length) {
-            this.value += placeholderText.charAt(index);
-            index++;
-            setTimeout(type.bind(this), 80); // Panggil type() dengan konteks 'this'
-          }
-        }
-  
-        type.call(this); // Mulai pengetikan dengan konteks 'this'
-      });
-  
-      field.addEventListener('blur', function() {
-        if (this.value === '') {
-          this.placeholder = placeholderText; // Kembalikan placeholder saat blur
-        }
-      });
-    });
-  });
-  
-document.addEventListener('DOMContentLoaded', function() {
-    const typingText = document.querySelector('#saran h2');
-  
-    // ... (kode JavaScript untuk mengetik teks)
-  
-    typingText.addEventListener('animationend', function() {
-      // Reset animasi setelah selesai
-      this.style.animation = 'none';
-      void this.offsetWidth; // Memaksa reflow untuk memulai ulang animasi
-      this.style.animation = 'typing 2.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite';
-  
-      // Tambahkan jeda jika diperlukan (contoh: 2 detik)
-      // setTimeout(() => {
-      //   this.style.animation = 'typing 2.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite';
-      // }, 2000);
-    });
-  });
+
   
