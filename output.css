@@ -447,7 +447,7 @@ body {
 }
 
 #saran .form-control {
-  background-color: rgb(215, 203, 203); /* Latar belakang putih semi-transparan */
+  background-color: rgb(182, 202, 201); /* Latar belakang putih semi-transparan */
   border: none;      /* Hapus border bawaan */
   border-radius: 5px;  /* Tambahkan sudut membulat ke kolom input */
   height: auto;
