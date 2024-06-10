@@ -504,7 +504,7 @@ body {
 
 @media (max-width: 768px) {
   #saran .btn-primary{
-    margin-left: 5rem;
+    margin-left: -4rem;
     width: 30%;
   }
 }
