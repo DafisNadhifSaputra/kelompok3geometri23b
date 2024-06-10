@@ -290,6 +290,7 @@ body {
   font-weight: 700;
   background-color: rgba(252, 255, 176, 0.84);
   border-radius: 2rem;
+  padding: 0.2rem;
 }
 
 .projects img {
@@ -351,6 +352,7 @@ body {
   font-weight: 700;
   background-color: rgba(252, 255, 176, 0.84);
   border-radius: 2rem;
+  padding: 0.2rem;
 }
 
 .skill-container {
@@ -400,9 +402,17 @@ body {
 
 /* Gaya Dasar Bagian */
 #saran {
-  padding: 20px 0; /* Tambahkan padding atas/bawah ke bagian */
-  background-color: rgba(0, 153, 255, 0.8); /* Atur warna latar belakang */
+  padding: 10rem; /* Tambahkan padding atas/bawah ke bagian */
+  --tw-bg-opacity: 1;
+  color: gray;
+  background: linear-gradient(to left, #0099ff ,#0099ff );
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+  /* Background abu-abu terang */
   width: 100%;
+  z-index: 4;
 }
 
 /* Gaya Wadah (Diasumsikan Anda menggunakan Bootstrap) */
@@ -410,6 +420,15 @@ body {
   border-radius: 10px; /* Sudut membulat untuk tampilan yang lebih lembut */
   padding: 30px;    /* Tingkatkan padding untuk ruang lebih di dalam */
   width: 100%;
+}
+
+@media (max-width: 768px) { 
+  #saran .container {
+    width: 280%;
+    margin-left: -9.2rem;
+    height: auto;
+    padding: 1rem;
+  }
 }
 
 /* Gaya Judul */
@@ -437,7 +456,7 @@ body {
   color: rgb(0, 0, 0);    /* Atur warna teks label menjadi putih */
   font-weight: bold; /* Buat label sedikit lebih tebal */
   width: 100%;
-  margin-left: -15rem;
+  margin-left: -8rem;
 }
 
 @media (max-width: 768px) {
@@ -460,7 +479,7 @@ body {
 @media (max-width: 768px) { 
   #saran .form-control {
     width: 200%;
-    margin-left: -1rem;
+    margin-left: 0;
   }
 }
 
@@ -468,10 +487,10 @@ body {
   background-color: #0066cc; /* Biru yang lebih gelap untuk tombol */
   border: none;
   margin-top: 15px; /* Tambahkan ruang di atas tombol */
-  width: 20%;
+  width: 25%;
   margin-left: 20rem;
-  z-index:2;
-  position:relative;
+  z-index: 2;
+  position: relative;
 }
 
 #saran .btn-primary:hover{
@@ -487,7 +506,7 @@ body {
 @media (max-width: 768px) {
   #saran .btn-primary{
     margin-left: 5rem;
-    width: 100%;
+    width: 30%;
   }
 }
 
@@ -524,6 +543,7 @@ footer {
   color: #333;            /* Warna teks gelap */
   margin-bottom: -1rem;      /* Padding dalam footer */
   text-align: left;       /* Teks rata kiri */
+  padding: -3rem;
 }
 
 footer p {
@@ -540,7 +560,5 @@ footer .text-3xl {
     text-align: center; /* Teks rata tengah pada layar kecil */
   }
 }
-
-  
 
   
