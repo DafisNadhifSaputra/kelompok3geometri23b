@@ -124,58 +124,49 @@ document.addEventListener('aos:out', ({ detail }) => {
 console.log('Animasi selesai:', detail);
 });
 
-window.addEventListener('scroll', () => {
-console.log('Scrolling...');
-});
-
-const marquee = document.querySelector('.skill-marquee marquee');
-marquee.addEventListener('animationiteration', () => {
-  marquee.scrollLeft = 0; // Reset posisi scroll ke awal
-});
-
-
-function handleFormSubmit(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const inputFields = document.querySelectorAll('#saran input, #saran textarea'); // Pilih semua input dan textarea
   
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
+    inputFields.forEach(field => {
+      field.addEventListener('focus', function() {
+        const placeholderText = this.placeholder;
+        this.placeholder = ''; // Kosongkan placeholder saat fokus
   
-    let isValid = true;
-    const errorMessages = [];
+        let index = 0;
+        function type() {
+          if (index < placeholderText.length) {
+            this.value += placeholderText.charAt(index);
+            index++;
+            setTimeout(type.bind(this), 80); // Panggil type() dengan konteks 'this'
+          }
+        }
   
-    // Validasi nama
-    if (nameInput.value.trim() === '') {
-      isValid = false;
-      errorMessages.push('Nama tidak boleh kosong.');
-    }
-  
-    // Validasi email (contoh sederhana)
-    if (!emailInput.value.includes('@')) {
-      isValid = false;
-      errorMessages.push('Email tidak valid.');
-    }
-  
-    // Validasi pesan
-    if (messageInput.value.trim() === '') {
-      isValid = false;
-      errorMessages.push('Pesan tidak boleh kosong.');
-    }
-  
-    // Tampilkan pesan error (jika ada)
-    const errorContainer = document.createElement('div');
-    errorContainer.classList.add('error-messages');
-  
-    if (!isValid) {
-      errorMessages.forEach(message => {
-        const errorParagraph = document.createElement('p');
-        errorParagraph.textContent = message;
-        errorContainer.appendChild(errorParagraph);
+        type.call(this); // Mulai pengetikan dengan konteks 'this'
       });
-      contactForm.insertBefore(errorContainer, contactForm.firstChild);
-    } else {
-      // Kirim formulir (misalnya, menggunakan AJAX atau Formspree)
-      // ...
-    }
-  };
+  
+      field.addEventListener('blur', function() {
+        if (this.value === '') {
+          this.placeholder = placeholderText; // Kembalikan placeholder saat blur
+        }
+      });
+    });
+  });
+  
+document.addEventListener('DOMContentLoaded', function() {
+    const typingText = document.querySelector('#saran h2');
+  
+    // ... (kode JavaScript untuk mengetik teks)
+  
+    typingText.addEventListener('animationend', function() {
+      // Reset animasi setelah selesai
+      this.style.animation = 'none';
+      void this.offsetWidth; // Memaksa reflow untuk memulai ulang animasi
+      this.style.animation = 'typing 2.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite';
+  
+      // Tambahkan jeda jika diperlukan (contoh: 2 detik)
+      // setTimeout(() => {
+      //   this.style.animation = 'typing 2.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite';
+      // }, 2000);
+    });
+  });
   
