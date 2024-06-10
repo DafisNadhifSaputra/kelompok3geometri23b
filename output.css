@@ -402,7 +402,6 @@ body {
 
 /* Gaya Dasar Bagian */
 #saran {
-  padding: 10rem; /* Tambahkan padding atas/bawah ke bagian */
   --tw-bg-opacity: 1;
   color: gray;
   background: linear-gradient(to left, #0099ff ,#0099ff );
@@ -418,14 +417,15 @@ body {
 /* Gaya Wadah (Diasumsikan Anda menggunakan Bootstrap) */
 #saran .container {
   border-radius: 10px; /* Sudut membulat untuk tampilan yang lebih lembut */
-  padding: 30px;    /* Tingkatkan padding untuk ruang lebih di dalam */
+  height:auto;    /* Tingkatkan padding untuk ruang lebih di dalam */
   width: 100%;
+  padding:1rem;
 }
 
 @media (max-width: 768px) { 
   #saran .container {
-     width: 490%;
-    margin-left: -9.2rem;
+    width: 95%;
+    margin-left: auto;
     height: auto;
   }
 }
@@ -460,7 +460,7 @@ body {
 
 @media (max-width: 768px) {
   #saran .form-label{
-    margin-left: -1rem;
+     margin-left: -7rem;
   }
 }
 
@@ -504,8 +504,8 @@ body {
 
 @media (max-width: 768px) {
   #saran .btn-primary{
-    margin-left: -5rem;
-    width: 25%;
+    margin-left: -1rem;
+    width: 120%;
   }
 }
 
