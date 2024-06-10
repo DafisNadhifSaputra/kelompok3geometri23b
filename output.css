@@ -424,7 +424,7 @@ body {
 
 @media (max-width: 768px) { 
   #saran .container {
-     width: 470%;
+     width: 490%;
     margin-left: -9.2rem;
     height: auto;
   }
@@ -504,8 +504,8 @@ body {
 
 @media (max-width: 768px) {
   #saran .btn-primary{
-    margin-left: -4rem;
-    width: 30%;
+    margin-left: -5rem;
+    width: 25%;
   }
 }
 
