@@ -424,7 +424,7 @@ body {
 
 @media (max-width: 768px) { 
   #saran .container {
-    width: 280%;
+     width: 470%;
     margin-left: -9.2rem;
     height: auto;
   }
@@ -460,7 +460,7 @@ body {
 
 @media (max-width: 768px) {
   #saran .form-label{
-    margin-left: -5rem;
+    margin-left: -1rem;
   }
 }
 
