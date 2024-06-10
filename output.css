@@ -474,6 +474,16 @@ body {
   position:relative;
 }
 
+#saran .btn-primary:hover{
+  opacity: 0.8; /* Tombol jadi transparan saat diarahkan mouse */
+}
+
+#saran .btn-primary:active{
+  background-color: #3e8e41; /* Warna latar berubah saat diklik */
+  box-shadow: 0.5px #666; /* Efek bayangan saat diklik */
+  transform: translateY(4px); /* Tombol bergerak ke bawah sedikit saat diklik */
+}
+
 @media (max-width: 768px) {
   #saran .btn-primary{
     margin-left: 5rem;
