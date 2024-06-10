@@ -288,7 +288,7 @@ body {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(252, 255, 176, 0.84);
   border-radius: 2rem;
 }
 
@@ -355,7 +355,6 @@ body {
 
 .skill-container {
   display: flex; /* Mengatur item dalam satu baris */
-  overflow-x: hidden; /* Mengaktifkan scroll horizontal jika item melebihi lebar wadah */
   
   /* Menggunakan flexbox untuk mengatur skill dalam satu baris */
 }
@@ -392,76 +391,144 @@ body {
   line-height: 1.75rem;
   font-weight: 600;
 }
-    
-    /* Footer */
-    .contact {
-      --tw-bg-opacity: 1;
-      background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-      --tw-text-opacity: 1;
-      color: rgb(31 41 55 / var(--tw-text-opacity));
-      /* Background putih */
-    }
-    
-    .contact p {
-      margin-bottom: 2rem;
-      text-align: center;
-      font-size: 1.875rem;
-      line-height: 2.25rem;
-      font-weight: 700;
-    }
-    
-    .contact form input,
-    .contact form textarea {
-      margin-bottom: 1rem;
-      width: 100%;
-      border-radius: 0.375rem;
-      border-width: 1px;
-      --tw-border-opacity: 1;
-      border-color: rgb(209 213 219 / var(--tw-border-opacity));
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
-    }
-    
-    .contact form button[type="submit"] {
-      border-radius: 0.25rem;
-      --tw-bg-opacity: 1;
-      background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      font-weight: 700;
-      --tw-text-opacity: 1;
-      color: rgb(255 255 255 / var(--tw-text-opacity));
-    }
-    
-    .contact form button[type="submit"]:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-    }
 
-    footer {
-      --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-  padding-top: 1rem;
-  padding-bottom: 0;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  background-size: 1;
-  margin-bottom: 0;
+#saran input, #saran textarea {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+}
+
+/* Gaya Dasar Bagian */
+#saran {
+  padding: 20px 0; /* Tambahkan padding atas/bawah ke bagian */
+  background-color: rgba(0, 153, 255, 0.8); /* Atur warna latar belakang */
+  width: 100%;
+}
+
+/* Gaya Wadah (Diasumsikan Anda menggunakan Bootstrap) */
+#saran .container {
+  border-radius: 10px; /* Sudut membulat untuk tampilan yang lebih lembut */
+  padding: 30px;    /* Tingkatkan padding untuk ruang lebih di dalam */
+  width: 100%;
+}
+
+/* Gaya Judul */
+#saran h2 {
+  color: white;     /* Atur warna teks judul menjadi putih untuk kontras */
+  margin-bottom: 3rem; /* Tambahkan ruang di bawah judul */
+  width: 100%; /* Lebar elemen h2 akan menyesuaikan dengan konten */
+  white-space: nowrap; /* Mencegah teks berganti baris */
+  overflow: hidden;    /* Menyembunyikan karakter yang belum diketik */
+  border-right: 0.15em solid orange; /* Menambahkan efek kursor berkedip */
+  animation: typing 2.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }}
+
+/* Gaya Formulir */
+#saran .form-label {
+  color: rgb(0, 0, 0);    /* Atur warna teks label menjadi putih */
+  font-weight: bold; /* Buat label sedikit lebih tebal */
+  width: 100%;
+  margin-left: -15rem;
+}
+
+@media (max-width: 768px) {
+  #saran .form-label{
+    margin-left: -5rem;
   }
-  
-  footer p {
-    text-align: left;
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
-  margin-left: 0.5rem;
-  /* Mengatur teks agar berada di kiri */
+}
+
+#saran .form-control {
+  background-color: rgb(215, 203, 203); /* Latar belakang putih semi-transparan */
+  border: none;      /* Hapus border bawaan */
+  border-radius: 5px;  /* Tambahkan sudut membulat ke kolom input */
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  margin-left: 10rem;
+}
+
+@media (max-width: 768px) { 
+  #saran .form-control {
+    width: 200%;
+    margin-left: -1rem;
   }
+}
+
+#saran .btn-primary {
+  background-color: #0066cc; /* Biru yang lebih gelap untuk tombol */
+  border: none;
+  margin-top: 15px; /* Tambahkan ruang di atas tombol */
+  width: 20%;
+  margin-left: 20rem;
+}
+
+@media (max-width: 768px) {
+  #saran .btn-primary{
+    margin-left: 5rem;
+    width: 100%;
+  }
+}
+
+/* Penyesuaian Responsif */
+@media (max-width: 768px) { 
+  #saran .col-md-8 {
+    flex: 0 0 100%; /* Buat kolom formulir lebar penuh pada layar yang lebih kecil */
+    max-width: 50%;
+  }
+}
+
+#saran input, #saran textarea {
+  caret-color: red; /* Ubah warna kursor (misalnya, merah) */
+  caret-shape: block; /* Bentuk kursor (block, underscore, bar) */
+}
+
+/* Animasi Kedipan Kursor */
+#saran input:focus, #saran textarea:focus {
+  caret-color: transparent; /* Sembunyikan kursor saat fokus */
+  animation: blink 1s infinite; /* Animasi kedipan */
+}
+
+@keyframes blink {
+  50% {
+    caret-color: red; /* Tampilkan kursor saat animasi 50% */
+  }
+}
+
+    
+
+  /* Gaya Footer */
+footer {
+  background-color: #fff; /* Latar belakang putih */
+  color: #333;            /* Warna teks gelap */
+  margin-bottom: -1rem;      /* Padding dalam footer */
+  text-align: left;       /* Teks rata kiri */
+}
+
+footer p {
+  margin-bottom: 5px;     /* Jarak antar paragraf */
+  margin-left: 1rem;
+}
+
+footer .text-3xl {
+  font-size: 1rem;   /* Ukuran font lebih besar untuk nomor telepon */
+  font-weight: bold;     /* Teks tebal */
+}
+@media (max-width: 768px) { 
+  footer {
+    text-align: center; /* Teks rata tengah pada layar kecil */
+  }
+}
+
   
 
   
