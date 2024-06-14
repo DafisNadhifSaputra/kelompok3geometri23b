@@ -301,7 +301,7 @@ body {
   border-radius: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 @media (min-width:768px){
@@ -327,18 +327,87 @@ body {
   text-align: center;
 }
 
-/* Contact Section */
+
+#pengalaman {
+  background: linear-gradient(to left, #4b1f7d , #0e011d);
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+
+#pengalaman h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  background-color: rgba(252, 255, 176, 0.84);
+  border-radius: 2rem;
+  padding: 0.2rem;
+}
+
+/* Gaya untuk container scroll */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 20px; /* Tambahkan jarak antar kartu */
+}
+
+.card-content {
+  display: grid; /* Menggunakan Grid untuk mengatur gambar dan tautan */
+  grid-template-rows: auto 1fr; /* Baris pertama untuk gambar, baris kedua untuk tautan */
+  border: 1px solid #ccc;
+  text-align: center;
+  width: fit-content; /* Lebar kartu menyesuaikan dengan konten */
+}
+
+/* Gaya untuk kartu */
+.card {
+  display: inline-flex;
+  width: 80% ;
+  margin-right: 1rem;
+  border: #ccc;
+  padding: 1px;
+  text-align: center;
+  flex: 0 0 auto; /* Mencegah kartu mengecil */
+}
+
+@media (min-width:768px){
+  .card {
+    width: 50%;
+    flex: 0 0 auto; /* Mencegah kartu mengecil */
+    display: inline-flex;
+  }
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width:768px){
+  .card img {
+    width: 100%;
+  }
+}
+
+.card a {
+  display: block; /* Membuat tautan memenuhi lebar kartu */
+  margin-top: 10px;
+  text-align: center;
+  color: blue; /* Warna tautan */
+  text-decoration: none; /* Menghapus garis bawah pada tautan */
+}
 
 
 /* Skill Section */
-.skills {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+#skills {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   --tw-bg-opacity: 1;
   color: gray;
   background: linear-gradient(to left, #4b1f7d , #0e011d);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
   /* Background abu-abu terang */
@@ -441,6 +510,11 @@ body {
   animation: typing 2.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
 }
 
+#saran .container h2 {
+  background-color: transparent;
+  border-radius: 0;
+}
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -455,7 +529,7 @@ body {
   color: rgb(0, 0, 0);    /* Atur warna teks label menjadi putih */
   font-weight: bold; /* Buat label sedikit lebih tebal */
   width: 100%;
-  margin-left: -1rem;
+  margin-left: -18rem;
 }
 
 @media (max-width: 768px) {
