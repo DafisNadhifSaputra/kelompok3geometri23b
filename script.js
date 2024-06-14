@@ -31,7 +31,7 @@ particlesJS("particles-js", {
             "value": "#ffffff" // Warna partikel
         },
         "shape": {
-            "type": "star", // Bentuk partikel (circle, edge, triangle, polygon, star, image)
+            "type": "circle", // Bentuk partikel (circle, edge, triangle, polygon, star, image)
             "stroke": {
                 "width": 0, // Ketebalan garis tepi
                 "color": "#000000" // Warna garis tepi
@@ -61,7 +61,7 @@ particlesJS("particles-js", {
                 }
         },
         "line_linked": {
-            "enable": false, // Apakah garis penghubung antar partikel diaktifkan
+            "enable": true, // Apakah garis penghubung antar partikel diaktifkan
             "distance": 150, // Jarak maksimal untuk membentuk garis penghubung
             "color": "#ffffff", // Warna garis penghubung
             "opacity": 0.4, // Opacity garis penghubung
@@ -109,11 +109,11 @@ const elements = document.querySelectorAll('.hero .element h1');
 elements.forEach(element => observer.observe(element));
   
 AOS.init({
-    // ... (opsi lainnya)
-threshold: 0.1, // Animasi dimulai saat 10% elemen terlihat
-once: false, // Animasi hanya berjalan sekali
-unable: 'mobile', // Nonaktifkan animasi di perangkat mobile
-    offset: 120, // Offset (dalam px) dari atas viewport untuk memulai animasi
+    
+threshold: 0.1, 
+once: false, 
+unable: 'mobile', 
+    offset: 120, 
     });
     
     document.addEventListener('aos:in', ({ detail }) => {
