@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 particlesJS("particles-js", {
     "particles": {
         "number": {
-            "value": 80, // Jumlah partikel
+            "value": 100, // Jumlah partikel
             "density": {
                 "enable": true,
                 "value_area": 800 // Area di mana partikel akan tersebar
