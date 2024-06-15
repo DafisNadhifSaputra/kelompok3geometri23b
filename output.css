@@ -1,9 +1,3 @@
-/* style.css */
-
-/* Umum */
-
-
-
 #particles-js {
   position: absolute;
   /* Posisikan elemen secara absolut */
@@ -108,7 +102,6 @@
   font-weight: 100;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  margin-top: 1rem;
   text-align: center;
   font-style: italic;
 }
@@ -121,6 +114,15 @@
   }
 }
 
+.space1 {
+  padding-top: 3.5rem;
+}
+
+@media (min-width:768px) {
+  .space1 {
+    padding-top: 6rem;
+  }
+}
 
 /* About Section */
 
