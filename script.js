@@ -69,7 +69,7 @@ particlesJS("particles-js", {
             },
             "move": {
                 "enable": true, // Apakah partikel bergerak
-            "speed": 5, // Kecepatan pergerakan
+            "speed": 3, // Kecepatan pergerakan
             "direction": "none", // Arah pergerakan (none, top, top-right, right, bottom-right, bottom, bottom-left, left, top-left)
             "random": false, // Apakah arah pergerakan acak
             "straight": false, // Apakah pergerakan lurus atau tidak
