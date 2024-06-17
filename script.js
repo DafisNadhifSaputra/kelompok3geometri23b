@@ -7,14 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 1000,
         reset: true
     });
-
-    // Contoh validasi formulir kontak (opsional)
-    const contactForm = document.querySelector('.contact form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            // ... (Logika validasi formulir)
-        });
-    }
 });
 
 
