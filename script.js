@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Contoh animasi scroll reveal (opsional)
-    ScrollReveal().reveal('.hero, .about, .projects, .contact, .skills, .saran', { 
+    ScrollReveal().reveal('.hero, .about, .projects, .skills, .saran, .pengalaman' { 
         delay: 200,
         origin: 'bottom',
         distance: '1px',
