@@ -1,15 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Contoh animasi scroll reveal (opsional)
-    ScrollReveal().reveal('.hero, .about, .projects, .contact, .skills, .saran', { 
-        delay: 200,
-        origin: 'bottom',
-        distance: '1px',
-        duration: 1000,
-        reset: true
-    });
-});
-
-
 particlesJS("particles-js", {
     "particles": {
         "number": {
@@ -161,3 +149,4 @@ document.addEventListener('DOMContentLoaded', function() {
       // }, 2000);
     });
   });
+  
