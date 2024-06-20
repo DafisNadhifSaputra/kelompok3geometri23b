@@ -26,7 +26,7 @@
 
 .nav-link {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(255 255 0 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -36,7 +36,7 @@
 
 .nav-link:hover {
   --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
+  color: rgb(255, 255, 255);
 }
 
 /* Hero Section */
@@ -45,7 +45,6 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  z-index: -1;
   background: linear-gradient(to right, #8158c2, #3f186c) !important;
 }
 
@@ -55,13 +54,13 @@
 }
 
 #foto-profil {
-  width: 120px; /* Atur lebar foto */
-  height: 120px; /* Atur tinggi foto */
+  width: 100px; /* Atur lebar foto */
+  height: 100px; /* Atur tinggi foto */
   border-radius: 50%; /* Membuat foto menjadi bulat */
   object-fit: cover; /* Agar foto menutupi seluruh area tanpa terdistorsi */
   display: block; /* Penting agar margin auto bekerja */
   margin: 0 auto;
-  margin-top: 10rem;
+  margin-top: 8rem;
   z-index: 1;
   background-color: #fff;
   padding:auto;
@@ -115,14 +114,57 @@
 }
 
 .space1 {
-  padding-top: 3.5rem;
+  padding-top: 3rem;
 }
 
 @media (min-width:768px) {
   .space1 {
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 }
+
+.social {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  font-size: 25px;
+  margin: 0 10px;
+  color: #fff; 
+}
+
+@media (min-width:768px) {
+  .social-link {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #fff; 
+  }
+}
+
+.social-link.linkedin:hover {
+  background-clip: text;
+  background: #007bff; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.social-link.instagram:hover {
+  background-clip: text;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.social-link.whatsapp:hover {
+  background-clip: text;
+  background: #25D366;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 /* About Section */
 
@@ -318,6 +360,8 @@
   }
 }
 
+
+
 .card img {
   width: 100%;
   height: auto;
@@ -334,7 +378,7 @@
   display: block; /* Membuat tautan memenuhi lebar kartu */
   padding: 5px;
   text-align: center;
-  color: blue; /* Warna tautan */
+  color: rgb(0, 0, 201); /* Warna tautan */
   text-decoration: none; /* Menghapus garis bawah pada tautan */
   background: rgba(252, 255, 176, 0.84);
 }
@@ -387,16 +431,16 @@
 
 @media (min-width: 768px) {
   .skills img {
-    width: 60%;
+    width: 120px;
+    height: 120px;
     flex: 0 0 auto; /* Mencegah kartu mengecil */
   }
 }
 
 .container {
   background-color: rgba(252, 255, 176, 0.84); /* Merah dengan opacity 50% */
-  height: auto;
-  width: auto;
   margin: 0;
+  width: min-content;
 }
 
 .skill-title {
