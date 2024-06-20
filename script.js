@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Contoh animasi scroll reveal (opsional)
-    ScrollReveal().reveal('.hero, .about, .projects, .skills, .saran, .pengalaman' { 
+    ScrollReveal().reveal('.hero, .about, .projects, .contact, .skills, .saran', { 
         delay: 200,
         origin: 'bottom',
         distance: '1px',
@@ -61,7 +61,7 @@ particlesJS("particles-js", {
             },
             "move": {
                 "enable": true, // Apakah partikel bergerak
-            "speed": 3, // Kecepatan pergerakan
+            "speed": 4, // Kecepatan pergerakan
             "direction": "none", // Arah pergerakan (none, top, top-right, right, bottom-right, bottom, bottom-left, left, top-left)
             "random": false, // Apakah arah pergerakan acak
             "straight": false, // Apakah pergerakan lurus atau tidak
@@ -161,4 +161,3 @@ document.addEventListener('DOMContentLoaded', function() {
       // }, 2000);
     });
   });
-  
