@@ -114,7 +114,13 @@
 }
 
 .space1 {
-  padding-top: 3rem;
+  padding: 1.8rem;
+}
+
+@media (max-width:768px) {
+  .space1 {
+    padding: 3rem;
+  }
 }
 
 @media (min-width:768px) {
@@ -165,8 +171,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-
-/* About Section */
 
 .about {
   --tw-bg-opacity: 1;
@@ -386,6 +390,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   }
   
   @media (min-width:768px){
@@ -396,7 +401,9 @@
   }
 }
 
-
+.button1 {
+  display: flex;
+}
 
 .card img {
   width: 100%;
@@ -417,6 +424,17 @@
   color: rgb(254, 254, 254); /* Warna tautan */
   text-decoration: none; /* Menghapus garis bawah pada tautan */
   width: 180px;
+  align-items: center;
+}
+
+@media (max-width:768px) {
+  .card a {
+    padding: 4px;
+    font-size: small;
+    font-style: normal;
+    margin: 5px;
+    width: 130px;
+  }  
 }
 
 .card a:hover {
@@ -637,7 +655,7 @@
 
   /* Gaya Footer */
 footer {
-  background-color: #fff; /* Latar belakang putih */
+  background: rgba(252, 255, 176, 0.84); /* Latar belakang putih */
   color: #333;            /* Warna teks gelap */      /* Padding dalam footer */
   text-align: left;
   padding: 5px;
