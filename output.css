@@ -6,6 +6,7 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+  margin-top: 3rem;
   /* Tempatkan partikel di belakang elemen lain */
 }
 
@@ -14,6 +15,46 @@
   --tw-bg-opacity: 0.8;
   z-index: 1;
   /* Ubah menjadi transparan dengan opacity 80% */
+}
+
+
+.container .nav-item{
+  display:flex;
+  width: max-content;
+  height: max-content;
+  text-align: center;
+  background-color: #8158c2;
+  margin: 0.2rem;
+}
+
+.container .nav-item a{
+  margin: 0 auto;
+}
+
+@media (max-width:768px) {
+  .container .nav-item{
+    width: 40%;
+    margin: 4px auto;
+  }
+}
+
+@media (max-width:768px) {
+  .container .nav-item a {
+    margin: 0 auto;
+  }
+}
+
+.container .nav-item:hover {
+  background-color: rgb(164, 225, 164);
+}
+
+.container .nav-item a {
+  color: white;
+  text-align: center;
+}
+
+.collapse a:hover {
+  color: black;
 }
 
 .navbar-brand {
@@ -43,7 +84,7 @@
 
 .hero {
   display: flex;
-  min-height: 95vh;
+  min-height: 100vh;
   flex-direction: column;
   background: linear-gradient(to right, #8158c2, #3f186c) !important;
 }
@@ -259,10 +300,8 @@
 
 @media (max-width:768px) {
   .projects3 {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -271,10 +310,15 @@
   margin-bottom: 1rem;
 }
 
-.projects3 {
-  display: flex;
+@media (min-width:768px) {
+  .projects3 {
+    display: flex;
+    margin-left: 7rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
 }
-
+}
 .container {
   border-radius: 2rem;
   width: 100%;
