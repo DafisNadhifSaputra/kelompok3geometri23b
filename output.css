@@ -23,7 +23,7 @@
   width: max-content;
   height: max-content;
   text-align: center;
-  background-color: #8158c2;
+  background-color: #dfdbe6;
   margin: 0.2rem;
 }
 
@@ -45,16 +45,16 @@
 }
 
 .container .nav-item:hover {
-  background-color: rgb(164, 225, 164);
+  background-color: rgb(77, 49, 128);
 }
 
 .container .nav-item a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 
-.collapse a:hover {
-  color: black;
+.container .nav-item a:hover {
+  color: rgb(255, 255, 255);
 }
 
 .navbar-brand {
@@ -178,7 +178,7 @@
 }
 
 .social-link {
-  font-size: 25px;
+  font-size: 30px;
   margin: 0 10px;
   color: #fff; 
 }
