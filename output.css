@@ -23,7 +23,7 @@
   width: max-content;
   height: max-content;
   text-align: center;
-  background-color: #dfdbe6;
+  background-color: transparent;
   margin: 0.2rem;
 }
 
@@ -45,16 +45,16 @@
 }
 
 .container .nav-item:hover {
-  background-color: rgb(77, 49, 128);
+  background-color: rgb(209, 203, 221);
 }
 
 .container .nav-item a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
 .container .nav-item a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .navbar-brand {
