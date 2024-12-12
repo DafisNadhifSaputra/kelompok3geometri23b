@@ -347,16 +347,31 @@
   border-radius: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
-     position: relative;
-  margin-left: 8px;
+  justify-items: center;
+  justify-content: center;
+    align-items: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .text-white {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width:768px){
   .projects img {
     width: 100%;
-    position: relative;
     object-fit: cover;
-    margin-left: -2px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
   }
 }
 
